@@ -12,9 +12,7 @@ pA, pB, pC = [],[],[]
 for i in range(n):
     pA.append(n-i)
 
-print('Sorting started')
-def move(n=n, src=pA, temp=pB, dest=pC):
-    # print poles
+def print_poles():
     print("pole A from bottom to top")
     for i in range(len(pA)):
         print(pA[i])
@@ -27,16 +25,24 @@ def move(n=n, src=pA, temp=pB, dest=pC):
     for i in range(len(pC)):
         print(pC[i])
 
+
+print('Sorting started')
+def move(n=n, src=pA, temp=pB, dest=pC):
+
     if n == 1:
         dest.append(n)
-        print("disk moved:", n)
         src.pop()
+        print("disk moved:", n)
+        print_poles()
     elif n >= 1:
         move(n-1, src, dest, temp)
         dest.append(n)
-        print("disk moved:", n)
         src.pop()
+
+        print("disk moved:", n)
+        print_poles()
         move(n-1, temp, src, dest)
+
 '''
     # August's code:
     if n>=1:
@@ -53,16 +59,6 @@ def move(n=n, src=pA, temp=pB, dest=pC):
 '''
 
 #initial call
+print_poles()
 move()
-# print poles
-print("pole A from bottom to top")
-for i in range(len(pA)):
-    print(pA[i])
-
-print("pole B from bottom to top")
-for i in range(len(pB)):
-    print(pB[i])
-
-print("pole C from bottom to top")
-for i in range(len(pC)):
-    print(pC[i])
+print_poles()
