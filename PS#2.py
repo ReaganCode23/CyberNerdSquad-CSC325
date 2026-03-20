@@ -6,17 +6,39 @@ The puzzle is to move all the disks from peg a to peg c, moving one disk at a ti
 Describe a recursive algorithm for solving the Towers of Hanoi puzzle for arbitrary n.
 (Hint: Consider ﬁrst the subproblem of moving all but the nth disk from peg a to another peg using the third as “temporary storage.”) another peg using the third as “temporary storage."""
 
-n = 4
+n = 3
 pA, pB, pC = [],[],[]
 
-print('DEBUG: pole A from base to height')
 for i in range(n):
     pA.append(n-i)
-    print(pA[-1])
 
 print('Sorting started')
 def move(n=n, src=pA, temp=pB, dest=pC):
-    # src is starting pA
+    # print poles
+    print("pole A from bottom to top")
+    for i in range(len(pA)):
+        print(pA[i])
+
+    print("pole B from bottom to top")
+    for i in range(len(pB)):
+        print(pB[i])
+
+    print("pole C from bottom to top")
+    for i in range(len(pC)):
+        print(pC[i])
+
+    if n == 1:
+        dest.append(n)
+        print("disk moved:", n)
+        src.pop()
+    elif n >= 1:
+        move(n-1, src, dest, temp)
+        dest.append(n)
+        print("disk moved:", n)
+        src.pop()
+        move(n-1, temp, src, dest)
+'''
+    # August's code:
     if n>=1:
         # move a n-1 tower (recursive) src -> temp
         move(n-1, src, dest, temp)
@@ -28,13 +50,19 @@ def move(n=n, src=pA, temp=pB, dest=pC):
 
         # move a n-1 tower (recursive), temp -> dest
         move(n-1, temp, src, dest)
-
-    # base case: if n=0, stop
+'''
 
 #initial call
 move()
+# print poles
+print("pole A from bottom to top")
+for i in range(len(pA)):
+    print(pA[i])
 
-print('DEBUG: pole C from base to height')
-for i in range(n):
+print("pole B from bottom to top")
+for i in range(len(pB)):
+    print(pB[i])
+
+print("pole C from bottom to top")
+for i in range(len(pC)):
     print(pC[i])
-
