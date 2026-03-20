@@ -61,4 +61,3 @@ def move(n=n, src=pA, temp=pB, dest=pC):
 #initial call
 print_poles()
 move()
-print_poles()
