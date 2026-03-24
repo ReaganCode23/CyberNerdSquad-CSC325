@@ -1,0 +1,2 @@
+R-8.23 Yes, Postorder and Preorder can visit each node in the tree in the same order if there is only one node. 
+R-8.23 Yes, Postorer can reverse Preorder if the each node in the tree does not have more than one child. (i.e a linked list)
