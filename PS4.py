@@ -32,3 +32,37 @@ if __name__ == "__main__":
 # error 3: (unindented line)
     a = ArithmeticProgression(2, 1)
     print(" ".join(str(next(a)) for _ in range(10)))
+
+'''
+Original Code
+
+class Progression:
+    def __init__(start=0):
+        self._current = start
+
+    def _advance(self):
+        self._current += 1
+
+    def __next__(self):
+        if self._current is None:
+            raise StopIteration()
+        else:
+            answer = self._current
+            self._advance()
+            return answer
+
+    def __iter__(self):
+        return self
+
+class ArithmeticProgression extends Progression
+    def __init__(self, increment=1, start=0):
+        super().__init__(start)
+        self._increment = increment
+
+    def advance(self):
+        self._increment += self._current
+
+if __name__ == "__main__":
+        a = ArithmeticProgression(2, 1)
+    print(" ".join(str(next(a)) for _ in range(10)))
+'''
