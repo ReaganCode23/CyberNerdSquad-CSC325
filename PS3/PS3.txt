@@ -1,0 +1,4 @@
+R-8.23 Yes, Postorder and Preorder can visit each node in the tree in the same order if there is only one node. 
+R-8.23 Yes, Postorer can reverse Preorder if the each node in the tree does not have more than one child. (i.e a linked list)
+R-8.24 No, It is impossible to have a one-node binary tree therefore elimiting the only possible case to visit each node in order.
+R-8.24 No, It is impossible to have a skewed binary tree therefore elimiting the only possible case to reverse the order.
