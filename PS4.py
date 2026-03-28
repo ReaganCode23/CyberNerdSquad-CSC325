@@ -13,7 +13,7 @@ class Progression:
             answer = self._current
             self._advance()
             return answer
-
+    
     def __iter__(self):
         return self
 
