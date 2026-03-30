@@ -1,11 +1,14 @@
 
 '''C-9.30 Give a nonrecursive implementation of the upheap method for the class HeapPriorityQueue.'''
 def upheap(a, i, n)
-#top of heap is i=0
-#parent index is i / 2 int division
-
-
-  
+  #top of heap is i=0
+  #parent index is i / 2 int division
+  while true:
+    if (i/2) > -1 and a[i] > a[i/2]:
+      a[i/2], a[i] = a[i], a[i/2]
+      i = i/2 
+    else:
+      return
 
 '''C-9.31 Give a nonrecursive implementation of the downheap method for the class HeapPriorityQueue'''
 def downheap(a, i, n):
