@@ -24,11 +24,11 @@ class ArithmeticProgression(Progression):
         super().__init__(start)
         self._increment = increment
 
-'''
-error 5: this function is unnecessary
-    def advance(self):
-        self._increment += self._current
-'''
+
+#error 5: this function is unnecessary
+    def _advance(self):
+        self._current += self._increment
+
 
 if __name__ == "__main__":
 # error 2: line indented to far
