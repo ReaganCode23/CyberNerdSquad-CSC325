@@ -40,3 +40,6 @@ def downheap(a, i, n):
 
 
 '''Show how the input of list [1,2,3,4,5,6] changes after each step (merge, remove_min or remove_max, downheap or upheap) of in-place heapsort. Use array format to show the changes, not the tree format.'''
+#----in-place heapsort on list-----
+#[1,/2,3,/4,5,6]
+
