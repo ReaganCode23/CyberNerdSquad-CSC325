@@ -1,0 +1,1376 @@
+<div>
+    <table id="yui_3_17_2_1_1704464252678_1699" style="border-collapse: collapse; width: 66.4653%; height: 905.527px;" border="1">
+        <caption>Hashing with chaining</caption>
+        <colgroup>
+            <col style="width: 13.1248%;" width="87" />
+            <col style="width: 23.4744%;" width="154" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 4.8749%;" width="38" />
+        </colgroup>
+        <tbody id="yui_3_17_2_1_1704464252678_1698">
+            <tr id="yui_3_17_2_1_1704464252678_1697" style="height: 131.25px;">
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">Inserted key</p>
+                </th>
+                <th id="yui_3_17_2_1_1704464252678_1696" style="height: 131.25px;" scope="col">
+                    <p id="yui_3_17_2_1_1704464252678_1695" dir="ltr">Hash value index &amp; Sequence of probed indices (if any)</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">0</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">1</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">2</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">3</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">4</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">5</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">6</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">7</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">8</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">9</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">10</p>
+                </th>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">12</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #e62429;">&nbsp;<span style="color: #000000;">h(12)=8</span></span></p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">13;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">94;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">44;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">12;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">16;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">20;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">44</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #000000;">h(44)=5</span></p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">39;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">88;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">23;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">5:</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">13</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(13)=0</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">11;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">88</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(88)=5</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">23</p>
+                </td>
+                <td style="height: 70.3711px;">h(23)=8</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">94</p>
+                </td>
+                <td style="height: 70.3711px;">h(94)=1</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">11</p>
+                </td>
+                <td style="height: 70.3711px;">h(11)=5</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">39</p>
+                </td>
+                <td style="height: 70.3711px;">h(39)=1</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">20</p>
+                </td>
+                <td style="height: 70.3711px;">h(20)=10</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">16</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(16)=9</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+            </tr>
+            <tr style="height: 70.5664px;">
+                <td style="height: 70.5664px;">
+                    <p dir="ltr">5</p>
+                </td>
+                <td style="height: 70.5664px;">h(5)=9</td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5664px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <table id="yui_3_17_2_1_1704464252678_1699" style="border-collapse: collapse; width: 66.4653%; height: 905.742px;" border="1">
+        <caption>Hashing with linear probing</caption>
+        <colgroup>
+            <col style="width: 13.1997%;" width="87" />
+            <col style="width: 23.3995%;" width="154" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 4.8749%;" width="38" />
+        </colgroup>
+        <tbody id="yui_3_17_2_1_1704464252678_1698">
+            <tr id="yui_3_17_2_1_1704464252678_1697" style="height: 131.25px;">
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">Inserted key</p>
+                </th>
+                <th id="yui_3_17_2_1_1704464252678_1696" style="height: 131.25px;" scope="col">
+                    <p id="yui_3_17_2_1_1704464252678_1695" dir="ltr">Hash value index &amp; Sequence of probed indices (if any)</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">0</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">1</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">2</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">3</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">4</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">5</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">6</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">7</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">8</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">9</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">10</p>
+                </th>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">12</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr"><span style="color: #e62429;"><span style="color: #000000;">h(12)=8</span></span></p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">13;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">94;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">39;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">16;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">5;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">44;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">88;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">11;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">12;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">23;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">20;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">44</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr"><span style="color: #000000;">h(44)=5</span></p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">13</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">h(13)=0</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">88</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">h(88)=5 collision! +1=6</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">23</p>
+                </td>
+                <td style="height: 70.3906px;">h(23)=8 collision! +1 = 9</td>
+                <td style="height: 70.3906px;">&nbsp;</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">94</p>
+                </td>
+                <td style="height: 70.3711px;">h(94)=1</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">11</p>
+                </td>
+                <td style="height: 70.3711px;">h(11)=5 collision! +1 +1 = 7</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">39</p>
+                </td>
+                <td style="height: 70.3711px;">h(39)=1 collision! +1 = 2</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">20</p>
+                </td>
+                <td style="height: 70.3711px;">h(20)=10</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">16</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;h(16)=9 collision! +1 +1 -&gt; +1 +1 +1 +1 =3</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+            </tr>
+            <tr style="height: 70.5859px;">
+                <td style="height: 70.5859px;">
+                    <p dir="ltr">5</p>
+                </td>
+                <td style="height: 70.5664px;">h(5)=9 collision! +1 +1 -&gt; +1 +1 +1 +1 +1 =4</td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <table id="yui_3_17_2_1_1704464252678_1699" style="border-collapse: collapse; width: 66.4838%; height: 919.227px;" border="1">
+        <caption>Hashing with quadratic probing</caption>
+        <colgroup>
+            <col style="width: 13.1997%;" width="87" />
+            <col style="width: 23.3995%;" width="154" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 4.8749%;" width="38" />
+        </colgroup>
+        <tbody id="yui_3_17_2_1_1704464252678_1698">
+            <tr id="yui_3_17_2_1_1704464252678_1697" style="height: 124.219px;">
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">Inserted key</p>
+                </th>
+                <th id="yui_3_17_2_1_1704464252678_1696" style="height: 124.219px;" scope="col">
+                    <p id="yui_3_17_2_1_1704464252678_1695" dir="ltr">Hash value index &amp; Sequence of probed indices (if any)</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">0</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">1</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">2</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">3</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">4</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">5</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">6</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">7</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">8</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">9</p>
+                </th>
+                <th style="height: 124.219px;" scope="col">
+                    <p dir="ltr">10</p>
+                </th>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">12</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #e62429;">&nbsp;<span style="color: #000000;">h(12)=8</span></span></p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">13;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">94;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">39;</p>
+                </td>
+                <td style="height: 70.3711px;">11;</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">44;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">88;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">16;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">12;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">23;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">20;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">44</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #000000;">h(44)=5</span></p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">13</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(13)=0</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">88</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(88)=5 collision! +1 =6</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">23</p>
+                </td>
+                <td style="height: 70.3711px;">h(23)=8 collision! +1 =9</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">94</p>
+                </td>
+                <td style="height: 70.3711px;">h(94)=1&nbsp;</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 91.121px;">
+                <td style="height: 91.121px;">
+                    <p dir="ltr">11</p>
+                </td>
+                <td style="height: 91.121px;">
+                    <p>h(11)=5 collision! +1&nbsp; =6&nbsp; &nbsp; ❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+2^2 =9❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+3^2 = 3</p>
+                </td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;"></td>
+                <td style="height: 91.121px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">39</p>
+                </td>
+                <td style="height: 70.3711px;">h(39)=1 collision! +1 =2</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">20</p>
+                </td>
+                <td style="height: 70.3711px;">h(20)=10&nbsp;</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+            </tr>
+            <tr style="height: 70.3711px;">
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">16</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(16)=9 collision! +1 =10 ❌</p>
+                    <p dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +2^2 =2 ❌</p>
+                    <p dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +3^2 = 7</p>
+                </td>
+                <td style="height: 70.3711px;">&nbsp;</td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3711px;"></td>
+            </tr>
+            <tr style="height: 70.5469px;">
+                <td style="height: 70.5469px;">
+                    <p dir="ltr">5</p>
+                </td>
+                <td style="height: 70.5469px;">
+                    <p>h(5)=9 collision +1 = 10 ❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+2^2 =9❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+3^2 = 3❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+4^2 = 3❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+5^2 = 1❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+6^2 =1❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+7^2 = 3❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+8^2 =7 ❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+9^2 = 2❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+10^2 = 10❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+11^2 = 9 ❌ (figures right)</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +12^2 = 10 ❌ (and many more, method is failing)</p>
+                    <p>&nbsp;</p>
+                </td>
+                <td style="height: 70.5469px;">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+                <td style="height: 70.5469px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <table id="yui_3_17_2_1_1704464252678_1699" style="border-collapse: collapse; width: 66.4653%; height: 905.742px;" border="1">
+        <caption>Hashing with double hashing; h'(k)=7-(kmod7)</caption>
+        <colgroup>
+            <col style="width: 13.1997%;" width="87" />
+            <col style="width: 23.3995%;" width="154" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 5.84989%;" width="38" />
+            <col style="width: 4.8749%;" width="38" />
+        </colgroup>
+        <tbody id="yui_3_17_2_1_1704464252678_1698">
+            <tr id="yui_3_17_2_1_1704464252678_1697" style="height: 131.25px;">
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">Inserted key</p>
+                </th>
+                <th id="yui_3_17_2_1_1704464252678_1696" style="height: 131.25px;" scope="col">
+                    <p id="yui_3_17_2_1_1704464252678_1695" dir="ltr">Hash value index &amp; Sequence of probed indices (if any)</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">0</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">1</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">2</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">3</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">4</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">5</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">6</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">7</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">8</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">9</p>
+                </th>
+                <th style="height: 131.25px;" scope="col">
+                    <p dir="ltr">10</p>
+                </th>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">12</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #e62429;">&nbsp;<span style="color: #000000;">h(12)=8</span></span></p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">13;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">23;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">44;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">88;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">94</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">12;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">44</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr"><span style="color: #000000;">h(44)=5</span></p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">13</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(13)=0</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">88</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p dir="ltr">h(88)=5 collision! +1*h'(88) =0 ❌&nbsp;</p>
+                    <p dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;+2*h'(88) =6</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">23</p>
+                </td>
+                <td style="height: 70.3711px;">h(23)=8 collision! +1*h'(23)&nbsp; =1</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">94</p>
+                </td>
+                <td style="height: 70.3711px;">h(94)=1 collision! +1*h'(94) = 7</td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">11</p>
+                </td>
+                <td style="height: 70.3711px;">
+                    <p>h(11)=5 collision! + 1*h'(11) =0 ❌&nbsp;</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 2*h'(11) =0 ❌&nbsp;</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 3*h'(11) =6 ❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 4*h'(11) =1 ❌</p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 5*h'(11) =7 ❌ help</p>
+                </td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">39</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">&nbsp;</p>
+                </td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">20</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+            </tr>
+            <tr style="height: 70.3906px;">
+                <td style="height: 70.3906px;">
+                    <p dir="ltr">16</p>
+                </td>
+                <td style="height: 70.3711px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+                <td style="height: 70.3906px;"></td>
+            </tr>
+            <tr style="height: 70.5859px;">
+                <td style="height: 70.5859px;">
+                    <p dir="ltr">5</p>
+                </td>
+                <td style="height: 70.5664px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+                <td style="height: 70.5859px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
