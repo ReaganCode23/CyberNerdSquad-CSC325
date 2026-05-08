@@ -49,7 +49,14 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
     parent = self._parent(j)
     if j > 0 and self._data[j] < self._data[parent]:
       self._swap(j, parent)
-      self._upheap(parent)             # recur at position of parent
+      self._upheap(parent)   # recur at position of parent
+
+  def _upheap_nonrecursive(self, j):
+    parent = self._parent(j)
+    while(j > 0 and self._data[j] < self._data[parent]):
+      self._swap(j, parent)
+      parent = self._parent(j)
+
   
   def _downheap(self, j):
     if self._has_left(j):
@@ -61,7 +68,25 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
           small_child = right
       if self._data[small_child] < self._data[j]:
         self._swap(j, small_child)
-        self._downheap(small_child)    # recur at position of small child
+        self._downheap(small_child)
+        
+  def _downheap_nonrecursive(self, j):
+    if self._has_left(j):    # recur at position of small child
+      left = self._left(j)
+      small_child = left               # although right may be smaller
+      if self._has_right(j):
+        right = self._right(j)
+        if self._data[right] < self._data[left]:
+          small_child = right
+    while(self._data[small_child] < self._data[j]):
+      self._swap(j, small_child)
+      if self._has_left(j):    # recur at position of small child
+        left = self._left(j)
+        small_child = left               # although right may be smaller
+        if self._has_right(j):
+          right = self._right(j)
+          if self._data[right] < self._data[left]:
+            small_child = right
 
   #------------------------------ public behaviors ------------------------------
   def __init__(self):
@@ -75,7 +100,7 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
   def add(self, key, value):
     """Add a key-value pair to the priority queue."""
     self._data.append(self._Item(key, value))
-    self._upheap(len(self._data) - 1)            # upheap newly added position
+    self._upheap_nonrecursive(len(self._data) - 1)            # upheap newly added position
   
   def min(self):
     """Return but do not remove (k,v) tuple with minimum key.
@@ -96,5 +121,5 @@ class HeapPriorityQueue(PriorityQueueBase): # base class defines _Item
       raise Empty('Priority queue is empty.')
     self._swap(0, len(self._data) - 1)           # put minimum item at the end
     item = self._data.pop()                      # and remove it from the list;
-    self._downheap(0)                            # then fix new root
+    self._downheap_nonrecursive(0)                            # then fix new root
     return (item._key, item._value)
