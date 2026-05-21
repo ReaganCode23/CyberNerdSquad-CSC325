@@ -60,6 +60,9 @@ class MerkleTree:
             self.root = hashed_data[0]
             return hashed_data[0]
 
+        if len(hashed_data) % 2 != 0:
+            hashed_data.append(hashed_data[-1])
+
         #create new list for the next level of the tree
         next_level = []
 
@@ -81,14 +84,28 @@ class MerkleTree:
         self._first_hash(self.data_list)
         self.root = self._build_tree(self.hashed_data)
 
-    '''def delete(self, data):
+    def delete(self, data):
+        self.data_list.remove(data)
+        self._first_hash(self.data_list)
+        self.root = self._build_tree(self.hashed_data)
 
-    def search(self, data):
+    '''def search(self, data):
 
     def get(self, data):'''
 
 if __name__ == '__main__':
-    L = [0, 1]
+    L = [0, 1, 2, 3, 4]
     m = MerkleTree(L)
-    m.insert(2)
-    m.insert(3)
+
+    m.insert(5)
+    m.insert(6)
+    m.insert(7)
+
+    m.print_tree()
+
+    m.delete(7)
+    m.delete(5)
+    m.delete(3)
+    m.delete(1)
+
+    m.print_tree()
