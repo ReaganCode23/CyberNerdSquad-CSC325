@@ -2,6 +2,9 @@
 Source Code:
 https://docs.python.org/3/library/hashlib.html
 https://www.geeksforgeeks.org/python/python-how-to-get-the-last-element-of-list/
+https://dev.to/craig_solomon/walking-up-a-merkle-tree-sha-256-proof-validation-in-python-2fg9
+https://stackoverflow.com/questions/15535205/what-does-1-mean-do-in-python
+https://alexandercodes.hashnode.dev/verifying-merkle-proofs-on-algorand
 '''
 
 import hashlib
@@ -11,7 +14,6 @@ class MerkleTree:
         self.data_list = data_list
         self.hashed_data = self._first_hash(self.data_list)
         self.tree = self._build_tree(self.hashed_data)
-        self.root = self.tree[0]
 
     def _hash(self, data):
         """
@@ -121,6 +123,20 @@ class MerkleTree:
         print("proof:", proof)
         return proof
 
+    def verify_proof(self, data, proof, root):
+        current_hash = self._hash(str(data))
+
+        for direction, sibling in proof:
+            if direction == "right":
+                current_hash = self._hash(current_hash + sibling)
+            else:
+                current_hash = self._hash(sibling + current_hash)
+
+        if current_hash == root:
+            return True
+        else:
+            return False
+
     def insert(self, new_data):
         self.data_list.append(new_data)
         self._update_tree()
@@ -133,5 +149,5 @@ if __name__ == '__main__':
     L = [0, 1, 2]
     m = MerkleTree(L)
     m.print_tree()
-    m.get_root()
-    m.get_proof(1)
+    proof = m.get_proof(0)
+    print(m.verify_proof(0, proof, m.root))
